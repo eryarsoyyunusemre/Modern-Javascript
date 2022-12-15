@@ -99,36 +99,36 @@ console.log(greeting)
 // PRIMITIVE
 
 // String
-const name ='Yunus'
+// const name ='Yunus'
 // Number
-const age = 20
+// const age = 20
 // Boolean
-const hasKids= false;
+// const hasKids= false;
 // Null
-const car = null;
+// const car = null;
 // Undefined
-let text;
+// let text;
 // Symbol
-const sym =Symbol()
+// const sym =Symbol()
 
-console.log(typeof name,name)
-console.log(typeof age,age)
-console.log(typeof hasKids,hasKids)
-console.log(typeof car,car)
-console.log(typeof text,text)
-console.log(typeof sym,sym)
+// console.log(typeof name,name)
+// console.log(typeof age,age)
+// console.log(typeof hasKids,hasKids)
+// console.log(typeof car,car)
+// console.log(typeof text,text)
+// console.log(typeof sym,sym)
 
 // REFERENCES TYPES - Objects
 // Array
-const hobbies =['movies','music']
-//Object literal
-const adress = {
-    city:'Kocaeli',
-    state:'Korfez'
-}
-const today = new Date()
+// const hobbies =['movies','music']
+// Object literal
+// const adress = {
+//     city:'Kocaeli',
+//     state:'Korfez'
+// }
+// const today = new Date()
 
 
-console.log(typeof hobbies,hobbies)
-console.log(typeof adress,adress)
-console.log(typeof today,today)
+// console.log(typeof hobbies,hobbies)
+// console.log(typeof adress,adress)
+// console.log(typeof today,today)
