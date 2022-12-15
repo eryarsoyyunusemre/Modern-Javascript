@@ -1,3 +1,4 @@
+// -- 1.BOLUM--
 //Yukarıdan mesaj olarak gelir
 // alert('Hello World'); 
 
@@ -34,6 +35,8 @@ console.timeEnd('Hello')
 
 console.clear()
 */
+
+// -- 2.BOLUM --
 // var,let const
 
 // var ve lete yenıden deger atanabılır
@@ -71,23 +74,61 @@ console.log(greeting)
 
 // CONST
 
-const name ='Yunus'
-console.log(name)
+// const name ='Yunus'
+// console.log(name)
 // Can not reassign
 // name = 'Emre'
 
 // Object
 
-const person ={
-    name:'Yunus',
-    age:20
-}
-person.name='Emre'
-console.log(person)
+// const person ={
+//     name:'Yunus',
+//     age:20
+// }
+// person.name='Emre'
+// console.log(person)
 
 // Array
-const numbers =[1,2,3,4]
-console.log(numbers)
-numbers.push(6,7)
-console.log('6,7 eklenir',numbers)
+// const numbers =[1,2,3,4]
+// console.log(numbers)
+// numbers.push(6,7)
+// console.log('6,7 eklenir',numbers)
 
+// -- 3.BOLUM --
+
+// PRIMITIVE
+
+// String
+const name ='Yunus'
+// Number
+const age = 20
+// Boolean
+const hasKids= false;
+// Null
+const car = null;
+// Undefined
+let text;
+// Symbol
+const sym =Symbol()
+
+console.log(typeof name,name)
+console.log(typeof age,age)
+console.log(typeof hasKids,hasKids)
+console.log(typeof car,car)
+console.log(typeof text,text)
+console.log(typeof sym,sym)
+
+// REFERENCES TYPES - Objects
+// Array
+const hobbies =['movies','music']
+//Object literal
+const adress = {
+    city:'Kocaeli',
+    state:'Korfez'
+}
+const today = new Date()
+
+
+console.log(typeof hobbies,hobbies)
+console.log(typeof adress,adress)
+console.log(typeof today,today)
