@@ -1,4 +1,4 @@
-// -- 1.BOLUM--
+//? -- 1.BOLUM--
 //Yukarıdan mesaj olarak gelir
 // alert('Hello World'); 
 
@@ -36,7 +36,7 @@ console.timeEnd('Hello')
 console.clear()
 */
 
-// -- 2.BOLUM --
+//* -- 2.BOLUM --
 // var,let const
 
 // var ve lete yenıden deger atanabılır
@@ -94,7 +94,7 @@ console.log(greeting)
 // numbers.push(6,7)
 // console.log('6,7 eklenir',numbers)
 
-// -- 3.BOLUM --
+//! -- 3.BOLUM --
 
 // PRIMITIVE
 
@@ -133,7 +133,7 @@ console.log(greeting)
 // console.log(typeof adress,adress)
 // console.log(typeof today,today)
 
-// -- 4.BOLUM --
+//? -- 4.BOLUM --
 
 // let val;
 
@@ -181,37 +181,94 @@ console.log(greeting)
 // console.log(sum)
 // console.log(typeof sum)
 
-// -- 5.BOLUM --
+//* -- 5.BOLUM --
 
-const num1=100
-const num2 =50
+// const num1=100
+// const num2 =50
 
-let val1
+// let val1
 // Simple math with number
-val1=num1+num2
-val1=num1*num2
-val1=num1-num2
-val1=num1/num2
-val1=num1%num2
+// val1=num1+num2
+// val1=num1*num2
+// val1=num1-num2
+// val1=num1/num2
+// val1=num1%num2
 
 // Math Object
-val1=Math.PI
-val1=Math.E
+// val1=Math.PI
+// val1=Math.E
 // .5 ve yukarısı ise bir üste yuvarlar
-val1=Math.round(2.5)
+// val1=Math.round(2.5)
 // bir üste yuvarlar .dan sonra sayı varsa
 // val1=Math.ceil(2.4)
 // virgülden sonra sayıda olsa 1 alta yuvarlar
-val1=Math.floor(2.7)
+// val1=Math.floor(2.7)
 // karekök alır
-val1= Math.sqrt(16)
+// val1= Math.sqrt(16)
 // sayıyı negatifte pozitif yapar
-val1=Math.abs(-3)
+// val1=Math.abs(-3)
 // karesını alır
-val1=Math.pow(2,4)
+// val1=Math.pow(2,4)
 
-val1=Math.min(1,3,5,6,2,45,12)
-val1=Math.max(1,3,5,6,2,45,12)
-val1=Math.floor(Math.random()*100)
+// val1=Math.min(1,3,5,6,2,45,12)
+// val1=Math.max(1,3,5,6,2,45,12)
+// val1=Math.floor(Math.random()*100)
 
-console.log(val1)
+// console.log(val1)
+
+
+//! -- 6.BOLUM --
+
+const firstName = 'Yunus'
+const lastName = 'Emre'
+const age = 20
+const str ='Hello there,my name is Yunus'
+const tags = 'web dev,web design,frontend'
+ 
+let val;
+val = firstName +' '+ lastName
+
+// Append
+val='Yunus '
+val+='Emre'
+
+val =`Hello my name is ${firstName} and Im an ${age} `
+
+val = firstName.length;
+
+// birleştirir
+val= firstName.concat(' ',lastName)
+
+// Change cas
+val=firstName.toUpperCase()
+val=firstName.toLowerCase()
+
+val=firstName[1]
+
+// indexOf()
+val=firstName.indexOf('u')// içinde 2 var mı dıye bakar baştan
+val=firstName.lastIndexOf('u')// sondan bakmaya başlar
+
+// charAt()
+val=firstName.charAt(1) //1.indexte ne oldugunu gosterir
+// Get last char
+val=firstName.charAt(firstName.length-1)
+
+// substring() aralıgı alır
+val=firstName.substring(0,4)
+
+//slice() parçayı alır
+val=firstName.slice(0,4)
+
+//split()
+val=str.split(' ') // içi boş olunca harfe böler içinde bir boşluk olursa kelımere
+val=tags.split(',')// virgüle göre ayırır
+
+//replace()
+val =str.replace('Yunus','Emre')//yer değiştirir
+
+// includes()
+val=str.includes('Hello') // içinde olup olmadıgına bakar
+
+console.log(val)
+
