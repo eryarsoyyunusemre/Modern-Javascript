@@ -1,8 +1,18 @@
 // listen for sumbit
-document.getElementById('loan-form').addEventListener('submit',calculateResult)
+document.getElementById('loan-form').addEventListener('submit',function(e){
+  // Hide result
+  document.getElementById('results').style.display='none'
+
+  // Show Loader
+  document.getElementById('loading').style.display='block'
+
+  setTimeout(calculateResult,2000)
+
+  e.preventDefault();
+})
 
 //Calculate Results
-function calculateResult(e){
+function calculateResult(){
   console.log('Calculating...')
   // UI Vars
   const amount = document.getElementById('amount')
@@ -25,17 +35,28 @@ function calculateResult(e){
     monthlyPayment.value=monthly.toFixed(2)// to fixed = .dan sonra 2 hane
     totalPayment.value=(monthly * calculatedPayments).toFixed(2)
     totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2)
+ 
+    // HIDe RESULT
+    document.getElementById('results').style.display='block'
+
+    // HIDE LOADER
+    document.getElementById('loading').style.display='none'
   }else{
     showError('Please Check Your Number')
   }
   
-  e.preventDefault();
-
+ 
 }
 
 
 // Show Error
 function showError(error){
+  // SHOW RESULT
+  document.getElementById('results').style.display='none'
+
+  // HIDE LOADER
+  document.getElementById('loading').style.display='none'
+
   // Create a div
   const errorDiv = document.createElement('div')
 
@@ -56,6 +77,7 @@ function showError(error){
 
   // Clear error after 3 seconds
   setTimeout(clearError,3000)
+
 }
 
 // Clear Error
