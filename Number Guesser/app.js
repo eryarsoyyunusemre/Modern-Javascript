@@ -19,11 +19,26 @@ const game = document.querySelector('#game'),
       maxNum = document.querySelector('.max-num'),
       guessBtn = document.querySelector('#guess-btn'),
       guessInput = document.querySelector('#guess-input'),
-      message = document.querySelector('.message');
+      message = document.querySelector('.message')
+      resetBtn = document.querySelector('#restart-btn')
 
 // Assign UI min and max
 minNum.textContent = min;
 maxNum.textContent = max;
+
+// Restart Btn
+resetBtn.addEventListener('click',function(){
+  guessInput.disabled = false
+  guessBtn.disabled = false
+
+  setMessage('')
+
+  guessInput.style.borderColor = 'black'
+  guessBtn.style.backgroundColor = 'white'
+  guessBtn.style.color ='black'
+
+  guessInput.value='Enter your guess...'
+})
 
 // Listen for guess
 guessBtn.addEventListener('click',function(){
@@ -36,6 +51,7 @@ guessBtn.addEventListener('click',function(){
 
   // Chechk if won
   if(guess == winningNum){
+    // game over won
     //Disable input
     guessInput.disabled = true
     // Change bordor color
@@ -44,7 +60,28 @@ guessBtn.addEventListener('click',function(){
     guessBtn.style.color ='white'
     setMessage(`${winningNum} is correct, YOU WIN!`,'green')
   }else{
-    
+    // Wrong number
+    guessesLeft -= 1
+
+    if(guessesLeft === 0){
+      // game over lost
+      guessInput.disabled = true
+      guessBtn.disabled = true
+      // Change bordor color
+      guessInput.style.borderColor = 'gray'
+      guessBtn.style.backgroundColor = 'gray'
+      guessBtn.style.color ='white'
+      setMessage(`Game Over,you lost. The correct number was ${winningNum}`,'red')
+
+      guessesLeft=3
+    }
+    else{
+      // game contiuness - answer wrong
+      guessInput.style.borderColor = 'red'
+      guessBtn.style.backgroundColor = 'red'
+      guessBtn.style.color ='white'
+      setMessage(`${guessesLeft} lives left!!`,'red')
+    }
   }
 })
 
