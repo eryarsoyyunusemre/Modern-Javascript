@@ -10,7 +10,7 @@ GAME FUNCTION:
 // Game values
 let min = 1,
     max = 10,
-    winningNum = 2,
+    winningNum = getRandomNum(min,max),
     guessesLeft = 3;
 
 // UI Elements
@@ -38,6 +38,8 @@ resetBtn.addEventListener('click',function(){
   guessBtn.style.color ='black'
 
   guessInput.value='Enter your guess...'
+
+  guessesLeft=3
 })
 
 // Listen for guess
@@ -72,8 +74,6 @@ guessBtn.addEventListener('click',function(){
       guessBtn.style.backgroundColor = 'gray'
       guessBtn.style.color ='white'
       setMessage(`Game Over,you lost. The correct number was ${winningNum}`,'red')
-
-      guessesLeft=3
     }
     else{
       // game contiuness - answer wrong
@@ -89,5 +89,9 @@ guessBtn.addEventListener('click',function(){
 function setMessage( msg , color ){
   message.textContent = msg
   message.style.color = color
- 
+}
+
+// Get Winning Num
+function getRandomNum(mix,max){
+    return Math.floor (Math.random()*(max-min+1)+min)
 }
