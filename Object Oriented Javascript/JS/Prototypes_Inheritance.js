@@ -35,7 +35,7 @@ console.log(customer1)
 // Customer greeting
 Customer.prototype.greeting = function(){
   return `Hello there ${this.firstName} ${this.lastName}
-  welcome to our company`
+  welcome to our `
 }
 
 console.log(customer1.greeting())
