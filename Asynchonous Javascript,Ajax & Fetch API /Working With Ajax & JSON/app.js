@@ -11,18 +11,19 @@ function loadCustomer(e) {
     xhr.onload = function(){
         if(this.status === 200) {
             // console.log(this.responseText);
-
+             
             const customer = JSON.parse(this.responseText);
 
             const output =`
                 <ul>
                     <li>ID: ${customer.id}</li>
                     <li>Name: ${customer.name}</li>
+                    <li>Company: ${customer.company}</li>
                     <li>Phone: ${customer.phone}</li>
-                </ul>`
-  
-        }
-        document.getElementById('customer').innerHTML = output;
+                </ul>`;
+                document.getElementById('customer').innerHTML = output;
+        }   
+        
     }
 
     xhr.send();
@@ -48,6 +49,7 @@ function loadCustomers(e) {
         <ul>
           <li>ID: ${customer.id}</li>
           <li>Name: ${customer.name}</li>
+          <li>Company: ${customer.company}</li>
           <li>Phone: ${customer.phone}</li>
         </ul>
       `;
