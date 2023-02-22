@@ -17,6 +17,6 @@ easyHTTP.prototype.get =  function(url,callback){
   this.http.send()
 }
 
-// MAke an HTTP POST Request
+// Make an HTTP POST Request
 // Make an HTTP PUT Request
 // Make an HTTP DELETE Request
