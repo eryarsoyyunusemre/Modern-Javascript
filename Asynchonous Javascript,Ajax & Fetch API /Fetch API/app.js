@@ -25,8 +25,8 @@ function getJson(){
     console.log(data)
     let output = ''
     data.forEach(function(post){
-      output+=`<ul>${post.title}</ul>`
-      output+=`<li>${post.body}</li>`
+      output+=`<li>${post.title}</li>`
+      output+=`<li>${post.body}</li> <br>`
     })
 
     document.getElementById('output').innerHTML = output
