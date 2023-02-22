@@ -37,10 +37,11 @@ function getJson(){
 }
 // Get from EXTERNAl API
 function getExternal(){
-  fetch('https://api.github.com/users').then(function(res){
+  fetch('https://api.github.com/users')
+  .then(function(res){
     return res.json()
   })
-  .then(function(data){
+  .then(data => {
     console.log(data)
     let output = ''
     data.forEach(function(user){
