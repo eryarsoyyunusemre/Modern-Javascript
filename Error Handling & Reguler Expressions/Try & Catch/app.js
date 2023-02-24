@@ -1,6 +1,12 @@
+const user = {email:'jdoe@gmail.com'}
+
 try{
+  
   // Produce a ReferenceError
-  myFunction()
+  // myFunction()
+  if(!user.name){
+    throw new SyntaxError('User has no name');
+  }
 }catch(e){
   console.log(e)
   // console.log(e.message)
