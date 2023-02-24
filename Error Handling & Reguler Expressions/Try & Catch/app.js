@@ -7,6 +7,6 @@ try{
   // console.log(e.name)
   // console.log(e instanceof ReferenceError)
 }finally{ //! SONUC NE OLURSA OLSUN BURASI CALISIR
-  console.log('Yunus')
+  console.log('Yunuss')
 }
 
